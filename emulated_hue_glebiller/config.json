@@ -1,10 +1,10 @@
 {
-  "name": "Emulated HUE",
+  "name": "Emulated HUE (glebiller)",
   "version": "0.3.0",
   "description": "Hue Emulation for Home Assistant",
-  "url": "https://github.com/hass-emulated-hue/core",
-  "slug": "emulated_hue",
-  "stage": "stable",
+  "url": "https://github.com/glebiller/hass-emulated-hue-core",
+  "slug": "emulated_hue_glebiller",
+  "stage": "experimental",
   "startup": "application",
   "boot": "auto",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -14,13 +14,14 @@
   "homeassistant_api": true,
   "init": false,
   "options": {
-    "verbose": false
+    "tag_commit_or_branch": "master",
+    "verbose": true
   },
   "schema": {
     "http_port": "int?",
     "https_port": "int?",
+    "tag_commit_or_branch": "str",
     "use_default_ports_for_discovery": "bool?",
     "verbose": "bool"
-  },
-  "image": "ghcr.io/hass-emulated-hue/core"
+  }
 }
